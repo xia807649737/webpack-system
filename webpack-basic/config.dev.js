@@ -8,7 +8,7 @@ module.exports = {
         // path: path.resolve('./dist/'),
         // path: path.resolve(__dirname,'./dist/'),
         path: path.join(__dirname, './dist/'),
-        filename: 'main.js', //输出后的文件名
+        filename: 'devbundle.js', //输出后的文件名
     },
-    mode: 'production'   //默认为production
+    mode: 'development'   //默认为production    
 }
