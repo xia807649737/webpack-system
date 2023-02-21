@@ -10,5 +10,6 @@ module.exports = {
         path: path.join(__dirname, './dist/'),
         filename: 'main.js', //输出后的文件名
     },
-    mode: 'production'   //默认为production
+    mode: 'production',   //默认为production
+    watch: true  // 自动开启监听模式，与调试处 webpack --watch指令用法一样
 }
