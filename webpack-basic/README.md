@@ -13,5 +13,6 @@
  # 2.在package.json文件中设置指令  watch：webpack --watch
 
 ### webpack-dev-server的用法
-#  devServer会在内存中生成一个打包好的bundle.js,供开发使用，修改代码后自动重新打包以及刷新浏览器
-
+# devServer依赖于webpack
+# devServer会在内存中生成一个打包好的bundle.js,供开发使用，修改代码后自动重新打包以及刷新浏览器
+# devServer直接访问内存中根目录下的压缩文件（具体看配置文件的出口文件名），不在硬盘的dist目录下（dist/***.js)

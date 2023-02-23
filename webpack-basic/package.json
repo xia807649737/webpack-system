@@ -87,9 +87,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"webpack",
-    "build:dev":"webpack --config config.dev.js",
-    "watch":"webpack --watch"
+    "build": "webpack",
+    "build:dev": "webpack --config config.dev.js",
+    "watch": "webpack --watch",
+    "dev": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",

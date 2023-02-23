@@ -5,5 +5,11 @@
 import a from './a.js';
 console.log(a);
 console.log('今天晚上早点睡觉啦');
-console.log('测试一下会不会显示main.js的内容');
-console.log('测试一下watch!!');
+// console.log('测试一下会不会显示main.js的内容');
+// console.log('测试一下watch!!');
+console.log('昨天真的早睡觉去了，可以!!');
+console.log('今天也一样的早点睡觉就行了');
+
+window.onload = function () {
+    document.querySelector('ul').style.listStyle = 'none';
+}
