@@ -1,3 +1,9 @@
+### 初始化项目产生package.json的文件
+# npm init -y
+
+### 在项目中安装webpack
+# npm i webpack webpack-cli -D
+
 ### webpack调试指令配置到package.json
  # build: webpack=>默认webpack.config.js的配置文件
  # build: webpack --watch=>默认监控webpack.config.js的配置文件
@@ -7,4 +13,5 @@
  # 2.在package.json文件中设置指令  watch：webpack --watch
 
 ### webpack-dev-server的用法
-#  
+#  devServer会在内存中生成一个打包好的bundle.js,供开发使用，修改代码后自动重新打包以及刷新浏览器
+
