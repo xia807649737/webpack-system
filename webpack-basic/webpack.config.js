@@ -11,14 +11,19 @@ module.exports = {
         // filename: 'main.js',        //输出后的文件名
         filename: 'bundle.js',         //输出后的文件名
     },
-    mode: 'production',                // 默认为production
+    mode: 'development',                // 默认为production
     // watch: true                     // 自动开启监听模式，与调试处 webpack --watch指令用法一样
 
-    // 添加以下代码保证webpack-dev-server正常启动
     devServer: {
+        // 添加以下代码保证webpack-dev-server正常启动
         static: {
             directory: path.join(__dirname, './'),
             watch: true
-        }
+        },
+        // 热更替的配置在4.30以上版本不需要安装插件
+        open: true,
+        compress: true,
+        port: 3000,
+        hot: true,
     }
 }

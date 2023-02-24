@@ -5,20 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>webpack_basic</title>
 </head>
 <!-- 浏览器中无法使用CommonJS规范导入导出模块-->
 <!-- <script src="./src/index.js"></script> -->
+
 <!-- 未用webpack-dev-server之前的打包文件路径-->
 <!-- <script src="./dist/main.js"></script> -->
-<!-- <script src="./dist/devbundle.js"></script> -->
+<!-- <script src="./dist/bundle.js"></script> -->
 
-<!-- 启用webpack-dev-server之后的打包文件路径是在根路径 / 之下，在内存中-->
+<!-- 启用webpack-dev-server之后的打包文件路径是在项目根路径 / 之下，在内存中,不走dist-->
 <!-- <script src="/main.js"></script> -->
 <script src="/bundle.js"></script>
 
 <body>
-    <ul class="sq">
+    <ul>
         <li>1</li>
         <li>2</li>
         <li>3</li>
