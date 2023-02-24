@@ -1,5 +1,5 @@
 const path = require('path');
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 // webpack的配置文件遵循CommonJS规范
 module.exports = {
     entry: './src/index.js',            //程序的入口文件
@@ -16,14 +16,20 @@ module.exports = {
 
     devServer: {
         // 添加以下代码保证webpack-dev-server正常启动
-        static: {
-            directory: path.join(__dirname, './'),
-            watch: true
-        },
+        // static: {
+        //     directory: path.join(__dirname, './'),
+        //     watch: true
+        // },
         // 热更替的配置在4.30以上版本不需要安装插件
         open: true,
         compress: true,
         port: 3000,
         hot: true,
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            filename: "index.html",
+            template: "./index.html"
+        })
+    ]
 }
