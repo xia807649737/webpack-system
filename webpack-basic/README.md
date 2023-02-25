@@ -38,4 +38,5 @@
 # 只有在开发的时候才需要用到自动编译工具，例如：webpack-dev-server，项目上线时都会直接使用webpack进行打包构建，不需要使用这些自动编译工具，自定编译工具只是为了提高开发体验
 
 ### loader  用于对模块的源代码进行转换
-# 安装loader插件  npm i css-loader style-loader -D
+# 1.安装loader插件  npm i css-loader style-loader -D
+# 2.

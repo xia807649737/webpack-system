@@ -31,5 +31,16 @@ module.exports = {
             filename: "index.html",
             template: "./index.html"
         })
-    ]
+    ],
+    // module: {
+    //     rules: [
+    //         // 配置是用来解析.cc文件的loader(style-loader和css-loader)
+    //         {
+    //             test: /\.css$/,
+    //             // webpack底层调用这些包的顺序是从右到左
+    //             use: ['style-loader', 'css-loader']
+    //         }
+    //     ]
+
+    // }
 }
