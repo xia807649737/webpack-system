@@ -38,5 +38,7 @@
 # 只有在开发的时候才需要用到自动编译工具，例如：webpack-dev-server，项目上线时都会直接使用webpack进行打包构建，不需要使用这些自动编译工具，自定编译工具只是为了提高开发体验
 
 ### loader  用于对模块的源代码进行转换
-# 1.安装loader插件  npm i css-loader style-loader -D
-# 2.
+# 1.安装css-loader插件    npm i css-loader style-loader -D
+# 2.安装less-loader插件   npm i less less-loader -D
+# 3.安装sass-loader插件   npm i node-sass sass-loader -D
+# 4.注意：sass-loader插件在node版本与node-sass版本不匹配的情况下，会一直安装报错，对应的在网上查下匹配的版本，node v14及以下版本可以直接安装，node v16及以上在package.json文件中直接添加属性"sass":"1.32"; "sass-loader"："^10.0.5"

@@ -10,5 +10,5 @@ module.exports = {
         path: path.join(__dirname, './dist/'),
         filename: 'probundle.js', //输出后的文件名
     },
-    mode: 'production'   //默认为production    
+    mode: 'production'   //默认为production   
 }

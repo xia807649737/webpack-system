@@ -32,15 +32,25 @@ module.exports = {
             template: "./index.html"
         })
     ],
-    // module: {
-    //     rules: [
-    //         // 配置是用来解析.cc文件的loader(style-loader和css-loader)
-    //         {
-    //             test: /\.css$/,
-    //             // webpack底层调用这些包的顺序是从右到左
-    //             use: ['style-loader', 'css-loader']
-    //         }
-    //     ]
-
-    // }
+    module: {
+        rules: [
+            // 配置是用来解析.cc文件的loader(style-loader和css-loader)
+            {
+                test: /\.css$/,
+                // webpack底层调用这些包的顺序是从右到左
+                // css-loader: 首先解析css文件
+                // style-loader: 然后将解析出来的文件放到html中
+                use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.less$/,
+                // less把语法转成css
+                use: ['style-loader', 'css-loader', 'less-loader']
+            },
+            {
+                test: /\.s(a|c)ss$/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
+            }
+        ]
+    }
 }
