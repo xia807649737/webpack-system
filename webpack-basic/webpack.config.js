@@ -50,6 +50,16 @@ module.exports = {
             {
                 test: /\.s(a|c)ss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
+                // file-loader用于解析图片(可能webpack5后的版本不需要安装该插件了)
+                test: /\.(jpg|png|jpeg|gif|bmp|)$/,
+                use: 'file-loader'
+            },
+            {
+                // file-loader用于解析字体样式(可能webpack5后的版本不需要安装该插件了)
+                test: /\.(woff|woffz|eot|svg|ttf)$/,
+                use: 'file-loader'
             }
         ]
     }

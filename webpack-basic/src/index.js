@@ -11,14 +11,19 @@ console.log(a);
 console.log('今天也一样的早点睡觉就行了!!');
 
 // 引入css样式文件
-import './css/index.css';
-import './css/b.css';
+import './static/css/index.css';
+import './static/css/b.css';
 
 // 引入less样式文件
-import './less/index.less';
+import './static/less/index.less';
 
 // 引入scss样式文件
-import './scss/index.scss';
+import './static/scss/index.scss';
+
+
+// 引入字体文件
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 window.onload = function () {
     document.querySelector('ul').style.listStyle = 'none';

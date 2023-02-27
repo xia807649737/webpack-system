@@ -42,3 +42,5 @@
 # 2.安装less-loader插件   npm i less less-loader -D
 # 3.安装sass-loader插件   npm i node-sass sass-loader -D
 # 4.注意：sass-loader插件在node版本与node-sass版本不匹配的情况下，会一直安装报错，对应的在网上查下匹配的版本，node v14及以下版本可以直接安装，node v16及以上在package.json文件中直接添加属性"sass":"1.32"; "sass-loader"："^10.0.5"
+# 5.安装file-loader插件   npm i file-loader -D ，ps：不知道为啥这里没有装file-loader这个插件也可以引用图片
+# 6.安装url-loader插件，基于file-loader对小图片进行base64处理  npm i url-loader -D
