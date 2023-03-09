@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>习题-拖拽Div滑块</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 0px;
+            background-color: purple;
+            position: absolute;
+        }
+    </style>
+    <script>
+
+        window.onload = function () {
+            function getPos(ev) {
+                var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
+                return { x: ev.clientX + scrollTop, y: ev.clientY + scrollLeft };
+            }
+            var oDiv = document.getElementById('div1');
+            var disX = 0;
+            var disY = 0;
+            oDiv.onmousedown = function (ev) {
+                var oEvent = ev || event;
+                disX = getPos(oEvent).x - oDiv.offsetLeft;
+                disY = getPos(oEvent).y - oDiv.offsetTop;
+                document.onmousemove = function (ev) {
+                    var oEvent = ev || event;
+                    var l = oEvent.clientX - disX;
+                    var t = oEvent.clientY - disY;
+                    if (l < 0) {
+                        l = 0;
+                    } else if (l > document.documentElement.clientWidth - oDiv.offsetWidth) {
+                        l = document.documentElement.clientWidth - oDiv.offsetWidth;
+                    }
+                    if (t < 0) {
+                        t = 0;
+                    } else if (t > document.documentElement.clientHeight - oDiv.offsetHeight) {
+                        t = document.documentElement.clientHeight - oDiv.offsetHeight;
+                    }
+                    oDiv.style.left = l + 'px';
+                    oDiv.style.top = t + 'px';
+                }
+                document.onmouseup = function () {
+                    document.onmousemove = null;
+                    document.onmouseup = null;
+                }
+                return false;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id='div1'></div>
+</body>
+
+</html>
